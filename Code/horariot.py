@@ -25,6 +25,10 @@ def convert_pdf():
         pdf.cell(200, 10, txt = x, ln = 1, align = 'L') 
 
     f.close()
+
+    pdf.output('Historico/historico.pdf')
+
+    """
     
     if exists('Historico/historico.pdf'):
         cont = 1
@@ -44,6 +48,8 @@ def convert_pdf():
     f = open("Banco/banco.txt", "a")
     f.write(f';\n')
     f.close()
+    
+    """
 
 def get_adicional(lista):
     

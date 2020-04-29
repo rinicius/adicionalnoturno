@@ -1,1 +1,4 @@
 ;
+vinicius1 | 29/04/2020 Qua | Adicional Noturno: 7:00:00
+vinicius12 | 29/04/2020 Qua | Adicional Noturno: 7:00:00
+vinicius123 | 29/04/2020 Qua | Adicional Noturno: 7:00:00
