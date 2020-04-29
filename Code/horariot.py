@@ -69,12 +69,8 @@ def get_adicional(lista):
             
             resultadoMinute = horariof[1]
 
-        except ValueError:
-            print('Insira um horário válido')
-            continue
-        
-        except IndexError:
-            print('Insira um horário válido')
+        except ValueError or IndexError:
+            #print('Insira um horário válido')
             continue
 
         if horariof[0] > 9 and horariof[0] < 22:
