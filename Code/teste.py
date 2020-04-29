@@ -7,7 +7,6 @@ lista = list()
 
 def adicionar(ui):
     
-
     def a():
         lista.append(ui.leHorario.text())
         print(ui.leHorario.text())
@@ -16,19 +15,21 @@ def adicionar(ui):
     ui.pbAdd.clicked.connect(a)
 
 def calcular(ui):
+    
     def b():
+        nome_Funcionario = ui.leFuncionario.text()
         string = ''
         for i in lista:
             string += f'{i}\n\n'
-        print(string)
         ui.lResultado.setText(string)
-
         numDate = date(year=datetime.now().year, month=datetime.now().month, day=datetime.now().day)
         weekday_name = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"]
         wkday = numDate.weekday()
         total = get_total(lista)
-        print(f'{numDate.strftime("%d/%m/%Y")} {weekday_name[wkday]} | Adicional Noturno: {total}')
-        write_banco(f'{numDate.strftime("%d/%m/%Y")} {weekday_name[wkday]} | Adicional Noturno: {total}')
+        print(f'{nome_Funcionario} | {numDate.strftime("%d/%m/%Y")} {weekday_name[wkday]} | Adicional Noturno: {total}')
+        write_banco(f'{nome_Funcionario} | {numDate.strftime("%d/%m/%Y")} {weekday_name[wkday]} | Adicional Noturno: {total}')
+        lista.clear()
+        ui.lResultado2.setText(f'{nome_Funcionario} | {numDate.strftime("%d/%m/%Y")} {weekday_name[wkday]} | Adicional Noturno: {total}')
         #convert_pdf()
     
     ui.pbCalcular.clicked.connect(b)

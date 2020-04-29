@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>795</width>
-    <height>427</height>
+    <width>931</width>
+    <height>570</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,18 +32,18 @@
       <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
-         <x>270</x>
-         <y>10</y>
-         <width>211</width>
-         <height>33</height>
+         <x>260</x>
+         <y>30</y>
+         <width>381</width>
+         <height>51</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Arial</family>
-         <pointsize>18</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <pointsize>36</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -53,8 +53,8 @@
       <widget class="QPushButton" name="pbAdd">
        <property name="geometry">
         <rect>
-         <x>90</x>
-         <y>260</y>
+         <x>133</x>
+         <y>320</y>
          <width>271</width>
          <height>71</height>
         </rect>
@@ -77,9 +77,9 @@
       <widget class="QPushButton" name="pbCalcular">
        <property name="geometry">
         <rect>
-         <x>410</x>
-         <y>260</y>
-         <width>271</width>
+         <x>500</x>
+         <y>320</y>
+         <width>270</width>
          <height>71</height>
         </rect>
        </property>
@@ -114,31 +114,130 @@
       <widget class="QLineEdit" name="leHorario">
        <property name="geometry">
         <rect>
-         <x>270</x>
-         <y>150</y>
+         <x>340</x>
+         <y>240</y>
          <width>211</width>
          <height>31</height>
         </rect>
        </property>
       </widget>
-      <widget class="QLabel" name="lResultado_2">
+      <widget class="QLabel" name="lResultado2">
        <property name="geometry">
         <rect>
-         <x>616</x>
-         <y>30</y>
-         <width>141</width>
-         <height>61</height>
+         <x>90</x>
+         <y>430</y>
+         <width>671</width>
+         <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">text-align: center;</string>
        </property>
        <property name="text">
         <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lNome">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>120</y>
+         <width>201</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Nome do funcionário</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="leFuncionario">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>160</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="textEdit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>410</y>
+         <width>701</width>
+         <height>71</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="botao">
+       <property name="geometry">
+        <rect>
+         <x>750</x>
+         <y>30</y>
+         <width>111</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#botao{
+background-color: transparent;
+border-image: url(:pdfroubado.png);
+background: none;
+border: none;
+background-repeat: none;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>PDF</string>
+       </property>
+       <property name="icon">
+        <iconset theme="pdf"/>
        </property>
       </widget>
       <widget class="QLabel" name="label">
        <property name="geometry">
         <rect>
          <x>340</x>
-         <y>110</y>
+         <y>200</y>
          <width>81</width>
          <height>31</height>
         </rect>
@@ -158,6 +257,17 @@
         <string>Horário</string>
        </property>
       </widget>
+      <zorder>verticalLayoutWidget</zorder>
+      <zorder>label_2</zorder>
+      <zorder>pbAdd</zorder>
+      <zorder>pbCalcular</zorder>
+      <zorder>lResultado</zorder>
+      <zorder>leHorario</zorder>
+      <zorder>lNome</zorder>
+      <zorder>leFuncionario</zorder>
+      <zorder>textEdit</zorder>
+      <zorder>lResultado2</zorder>
+      <zorder>botao</zorder>
      </widget>
     </item>
    </layout>
@@ -167,7 +277,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>795</width>
+     <width>931</width>
      <height>21</height>
     </rect>
    </property>

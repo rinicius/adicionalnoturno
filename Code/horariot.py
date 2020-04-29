@@ -1,4 +1,4 @@
-import datetime
+from datetime import timedelta
 from fpdf import FPDF 
 
 listahorario = list()
@@ -51,22 +51,21 @@ def get_adicional(lista):
             print('Insira um horário válido')
             continue
 
-
         if horariof[0] > 9 and horariof[0] < 22:
-            continue
-        else:
-            pass
-
-        if horarioAN[0] == horariof[0]:
             resultadoHour = 0
-        else:
-            if horariof[0] >= 5 and horariof[0] <= 9:
-                resultadoHour = 7
-            elif horarioAN[0] < horariof[0]:
-                resultadoHour = horariof[0] - horarioAN[0]
-            else:
-                resultadoHour = (horarioAN[0] - horariof[0] - 24) * -1
+            resultadoMinute = 0
 
+        else:
+
+            if horarioAN[0] == horariof[0]:
+                resultadoHour = 0
+            else:
+                if horariof[0] >= 5 and horariof[0] <= 9:
+                    resultadoHour = 7
+                elif horarioAN[0] < horariof[0]:
+                    resultadoHour = horariof[0] - horarioAN[0]
+                else:
+                    resultadoHour = (horarioAN[0] - horariof[0] - 24) * -1
 
         resultadohora.append(resultadoHour)
         resultadomin.append(resultadoMinute)
@@ -78,9 +77,31 @@ def get_adicional(lista):
 
 
 def get_total(lista):
-    
-    resultado = get_adicional(lista)
+ 
+    resultado = get_adicional(lista) 
 
-    total = sum(resultado[1]) + (sum(resultado[0]) * 60)       
+    if not resultado == None:
 
-    return str(datetime.timedelta(minutes=total))
+        soma = sum(resultado[1]) + (sum(resultado[0]) * 60)
+        total = ""
+        total = str(timedelta(minutes=soma))
+        total3 = timedelta(minutes=soma)
+        
+        if "day" in total:
+            total = total.split(' ')[2].split(':')
+            hor = total3.days * 24 + int(total[0])
+ 
+            return f"{hor}:{total[1]}:00"
+
+        else:
+            return f"{timedelta(minutes=soma)}"
+
+
+"""
+total = '1 day, 41:00:00'
+
+
+total = total.split(' ')[2].split(':')
+print(total)
+
+"""
