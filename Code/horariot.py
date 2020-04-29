@@ -40,9 +40,6 @@ def get_adicional(lista):
 
             horariof = i.split(':')
             horariof = [int(i) for i in horariof]
-
-            if horariof[0] == 0:
-                break
             
             resultadoMinute = horariof[1]
 
