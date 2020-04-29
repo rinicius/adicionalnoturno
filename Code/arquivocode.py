@@ -54,7 +54,7 @@ class Ui_MainWindow(object):
         self.pbCalcular.setStyleSheet("background-color: rgb(255, 124, 84);")
         self.pbCalcular.setObjectName("pbCalcular")
         self.lResultado = QtWidgets.QLabel(self.frame)
-        self.lResultado.setGeometry(QtCore.QRect(30, 40, 47, 191))
+        self.lResultado.setGeometry(QtCore.QRect(10, 0, 47, 521))
         self.lResultado.setText("")
         self.lResultado.setObjectName("lResultado")
         self.leHorario = QtWidgets.QLineEdit(self.frame)
@@ -99,14 +99,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.botao.setFont(font)
         self.botao.setAutoFillBackground(False)
-        self.botao.setStyleSheet("#botao{\n"
-"background-color: transparent;\n"
-"border-image: url(:pdfroubado.png);\n"
-"background: none;\n"
-"border: none;\n"
-"background-repeat: none;\n"
-"}\n"
-"")
+        self.botao.setStyleSheet("")
         icon = QtGui.QIcon.fromTheme("pdf")
         self.botao.setIcon(icon)
         self.botao.setObjectName("botao")

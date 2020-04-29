@@ -101,10 +101,10 @@
       <widget class="QLabel" name="lResultado">
        <property name="geometry">
         <rect>
-         <x>30</x>
-         <y>40</y>
+         <x>10</x>
+         <y>0</y>
          <width>47</width>
-         <height>191</height>
+         <height>521</height>
         </rect>
        </property>
        <property name="text">
@@ -217,14 +217,7 @@
         <bool>false</bool>
        </property>
        <property name="styleSheet">
-        <string notr="true">#botao{
-background-color: transparent;
-border-image: url(:pdfroubado.png);
-background: none;
-border: none;
-background-repeat: none;
-}
-</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>PDF</string>

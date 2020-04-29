@@ -26,13 +26,16 @@ def calcular(ui):
         weekday_name = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"]
         wkday = numDate.weekday()
         total = get_total(lista)
-        print(f'{nome_Funcionario} | {numDate.strftime("%d/%m/%Y")} {weekday_name[wkday]} | Adicional Noturno: {total}')
         write_banco(f'{nome_Funcionario} | {numDate.strftime("%d/%m/%Y")} {weekday_name[wkday]} | Adicional Noturno: {total}')
         lista.clear()
         ui.lResultado2.setText(f'{nome_Funcionario} | {numDate.strftime("%d/%m/%Y")} {weekday_name[wkday]} | Adicional Noturno: {total}')
-        #convert_pdf()
     
     ui.pbCalcular.clicked.connect(b)
+
+def imprimir(ui):
+    def c():
+        convert_pdf()
+    ui.botao.clicked.connect(c)
 
 
 if __name__ == "__main__":
@@ -44,6 +47,7 @@ if __name__ == "__main__":
     MainWindow.show()
     adicionar(ui)
     calcular(ui)
+    imprimir(ui)
     sys.exit(app.exec_())
 
 

@@ -1,5 +1,7 @@
 from datetime import timedelta
 from fpdf import FPDF 
+from os.path import exists
+
 
 listahorario = list()
 
@@ -18,12 +20,30 @@ def convert_pdf():
     pdf.cell(200, 20, txt = "", align = 'L') 
     
     f = open("Banco/banco.txt", "r")
-
+    
     for x in f: 
         pdf.cell(200, 10, txt = x, ln = 1, align = 'L') 
 
-    pdf.output("Historico/historico.pdf") 
+    f.close()
+    
+    if exists('Historico/historico.pdf'):
+        cont = 1
+        while True:
+            if exists(f'Historico/historico_{cont}.pdf'):
+                cont += 1
+                continue
+            else:
+                pdf.output(f'Historico/historico_{cont}.pdf')
+                cont = 1
+                break
+    else:
+        pdf.output('Historico/historico.pdf')
 
+    open("Banco/banco.txt", "w").close()
+
+    f = open("Banco/banco.txt", "a")
+    f.write(f';\n')
+    f.close()
 
 def get_adicional(lista):
     
