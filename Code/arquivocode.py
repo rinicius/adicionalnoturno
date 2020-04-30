@@ -88,7 +88,7 @@ class Ui_MainWindow(object):
         self.leHorario.setGeometry(QtCore.QRect(340, 240, 211, 31))
         self.leHorario.setObjectName("leHorario")
         self.lResultado2 = QtWidgets.QLabel(self.frame)
-        self.lResultado2.setGeometry(QtCore.QRect(127, 450, 671, 31))
+        self.lResultado2.setGeometry(QtCore.QRect(127, 460, 671, 31))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(11)
@@ -117,12 +117,11 @@ class Ui_MainWindow(object):
         self.leFuncionario.setObjectName("leFuncionario")
         self.textEdit = QtWidgets.QTextEdit(self.frame)
         self.textEdit.setEnabled(False)
-        self.textEdit.setGeometry(QtCore.QRect(110, 430, 701, 71))
+        self.textEdit.setGeometry(QtCore.QRect(110, 445, 701, 71))
         self.textEdit.setObjectName("textEdit")
         self.botao = QtWidgets.QPushButton(self.frame)
         self.botao.setGeometry(QtCore.QRect(833, 0, 81, 61))
         font = QtGui.QFont()
-        font.setPointSize(10)
         font.setUnderline(False)
         font.setStrikeOut(False)
         self.botao.setFont(font)
@@ -181,6 +180,24 @@ class Ui_MainWindow(object):
 "")
         self.label_4.setAlignment(QtCore.Qt.AlignCenter)
         self.label_4.setObjectName("label_4")
+        self.pbRemover = QtWidgets.QPushButton(self.frame)
+        self.pbRemover.setGeometry(QtCore.QRect(15, 400, 101, 31))
+        self.pbRemover.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pbRemover.setStyleSheet("#pushButton {\n"
+"color: #494949 !important;\n"
+"text-transform: uppercase;\n"
+"text-decoration: none;\n"
+"background: #ffffff;\n"
+"padding: 20px;\n"
+"border: 4px solid #494949 !important;\n"
+"}\n"
+"\n"
+"#pushButton:hover {\n"
+"color: #ffffff !important;\n"
+"background: #aa0000;\n"
+"border-color: #aa0000 !important;\n"
+"}")
+        self.pbRemover.setObjectName("pbRemover")
         self.label.raise_()
         self.label_2.raise_()
         self.pbAdd.raise_()
@@ -193,6 +210,7 @@ class Ui_MainWindow(object):
         self.botao.raise_()
         self.label_3.raise_()
         self.label_4.raise_()
+        self.pbRemover.raise_()
         self.gridLayout.addWidget(self.frame, 0, 1, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -212,6 +230,7 @@ class Ui_MainWindow(object):
         self.botao.setText(_translate("MainWindow", "PDF"))
         self.label.setText(_translate("MainWindow", "Horário"))
         self.label_4.setText(_translate("MainWindow", "Últimas Entradas"))
+        self.pbRemover.setText(_translate("MainWindow", "Remover"))
 
 
 if __name__ == "__main__":

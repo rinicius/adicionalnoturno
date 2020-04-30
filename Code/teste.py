@@ -2,6 +2,9 @@
 from datetime import date, datetime
 from horariot import get_adicional, get_total, write_banco, convert_pdf
 from arquivocode import *
+from msvcrt import *
+from pymsgbox import *
+
 
 lista = list()
 
@@ -9,11 +12,29 @@ def adicionar(ui):
     
     def a():
 
-        lista.append(ui.leHorario.text())
-        print(ui.leHorario.text())        
-        ui.label_3.setText(ui.label_3.text() + "\n" + ui.leHorario.text())
-        ui.leHorario.setText('')
+        try:
 
+            testando = ui.leHorario.text().split(':')
+            
+            nHour = int(testando[0])
+            nMinute = int(testando[1])
+
+            if nHour >= 24 or nHour < 0:
+                print('1')
+                raise 
+            if nMinute > 59 or nMinute < 0:
+                print('2')
+                raise
+
+            lista.append(ui.leHorario.text())
+            print(ui.leHorario.text())
+            ui.label_3.setText(ui.label_3.text() + "\n" + ui.leHorario.text())
+            ui.leHorario.setText('')                
+
+        except Exception:
+            alert(text='Digite um Horario Válido', title='ERRO!', button='OK')  
+            ui.leHorario.setText('')              
+            
     ui.pbAdd.clicked.connect(a)
 
 def calcular(ui):
@@ -35,7 +56,15 @@ def calcular(ui):
         ui.label_3.setText('')           
             
     ui.pbCalcular.clicked.connect(b)
+
+def remover(ui):
+    def sla():
+        lista.pop()
+        ui.label_3.setText('')
+        for i in lista:
+            ui.label_3.setText('\n' +i + '\n')    
     
+    ui.pbRemover.clicked.connect(sla)
 
 def imprimir(ui):
     def c():
@@ -43,20 +72,41 @@ def imprimir(ui):
     ui.botao.clicked.connect(c)
 
 
+# def key_pressioned(ui):
+
+#     if 13 in list(msvcrt.getch()):
+#         adicionar(ui)
+    
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
-    MainWindow.show()
+    MainWindow.show()    
     adicionar(ui)
     calcular(ui)
     imprimir(ui)
+    remover(ui)
+    #key_pressioned(ui)
     sys.exit(app.exec_())
 
 
 """
+
+import msvcrt
+
+def monitor(key):
+
+    if 13 in key:
+        print('Enter')
+
+    else:
+        print(key)
+
+for i in range(0, 5):
+    monitor(list(msvcrt.getch()))
 
 
 numDate = date(year=datetime.now().year, month=datetime.now().month, day=datetime.now().day)
