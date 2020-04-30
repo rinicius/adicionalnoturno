@@ -183,7 +183,7 @@ class Ui_MainWindow(object):
         self.pbRemover = QtWidgets.QPushButton(self.frame)
         self.pbRemover.setGeometry(QtCore.QRect(15, 400, 101, 31))
         self.pbRemover.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.pbRemover.setStyleSheet("#pushButton {\n"
+        self.pbRemover.setStyleSheet("#pbRemover {\n"
 "color: #494949 !important;\n"
 "text-transform: uppercase;\n"
 "text-decoration: none;\n"
@@ -192,7 +192,7 @@ class Ui_MainWindow(object):
 "border: 4px solid #494949 !important;\n"
 "}\n"
 "\n"
-"#pushButton:hover {\n"
+"#pbRemover:hover {\n"
 "color: #ffffff !important;\n"
 "background: #aa0000;\n"
 "border-color: #aa0000 !important;\n"

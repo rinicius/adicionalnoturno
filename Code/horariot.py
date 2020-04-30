@@ -1,9 +1,12 @@
 from datetime import timedelta
 from fpdf import FPDF 
 from os.path import exists
+from pymsgbox import prompt
+from PyQt5 import QtWidgets
 
 
 listahorario = list()
+
 
 def write_banco(frase):
     frase1 = str(frase)
@@ -13,6 +16,7 @@ def write_banco(frase):
 
 
 def convert_pdf():
+        
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font("Arial", size=15)
@@ -26,30 +30,23 @@ def convert_pdf():
 
     f.close()
 
-    pdf.output('Historico/historico.pdf')
 
-    """
+    filePath = QtWidgets.QFileDialog.getExistingDirectory()
     
-    if exists('Historico/historico.pdf'):
-        cont = 1
-        while True:
-            if exists(f'Historico/historico_{cont}.pdf'):
-                cont += 1
-                continue
-            else:
-                pdf.output(f'Historico/historico_{cont}.pdf')
-                cont = 1
-                break
-    else:
-        pdf.output('Historico/historico.pdf')
-
-    open("Banco/banco.txt", "w").close()
-
-    f = open("Banco/banco.txt", "a")
-    f.write(f';\n')
-    f.close()
-    
-    """
+    if filePath:        
+        try:
+            
+            print(filePath)
+            diretorio = filePath
+            nomedoarquivo = str(prompt(text='Insira o nome do PDF', title='Nome do PDF'))
+            pdf.output(f'{diretorio}/{nomedoarquivo}.pdf')
+            
+            f = open("Banco/banco.txt", "a")
+            f.write(f'\n')
+            f.close()
+            
+        except Exception:
+            pass
 
 def get_adicional(lista):
     
@@ -104,26 +101,17 @@ def get_total(lista):
 
     if not resultado == None:
 
+    
         soma = sum(resultado[1]) + (sum(resultado[0]) * 60)
         total = ""
         total = str(timedelta(minutes=soma))
         total3 = timedelta(minutes=soma)
-        
+            
         if "day" in total:
             total = total.split(' ')[2].split(':')
             hor = total3.days * 24 + int(total[0])
- 
+    
             return f"{hor}:{total[1]}:00"
 
         else:
             return f"{timedelta(minutes=soma)}"
-
-
-"""
-total = '1 day, 41:00:00'
-
-
-total = total.split(' ')[2].split(':')
-print(total)
-
-"""
