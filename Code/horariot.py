@@ -4,7 +4,6 @@ from os.path import exists
 from pymsgbox import prompt
 from PyQt5 import QtWidgets
 
-
 listahorario = list()
 
 
@@ -67,7 +66,6 @@ def get_adicional(lista):
             resultadoMinute = horariof[1]
 
         except ValueError or IndexError:
-            #print('Insira um horário válido')
             continue
 
         if horariof[0] > 9 and horariof[0] < 22:

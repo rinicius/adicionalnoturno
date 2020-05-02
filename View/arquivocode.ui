@@ -375,7 +375,7 @@ font-weight: bold;
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">#pushButton {
+        <string notr="true">#pbRemover {
 color: #494949 !important;
 text-transform: uppercase;
 text-decoration: none;
@@ -384,7 +384,7 @@ padding: 20px;
 border: 4px solid #494949 !important;
 }
 
-#pushButton:hover {
+#pbRemover:hover {
 color: #ffffff !important;
 background: #aa0000;
 border-color: #aa0000 !important;
