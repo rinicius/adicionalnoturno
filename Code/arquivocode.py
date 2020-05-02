@@ -8,8 +8,9 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.Qt import *
 from teste import get_string, adicionar
+from PyQt5.QtCore import Qt
+
 
 
 class Ui_MainWindow(object):
@@ -219,22 +220,25 @@ class Ui_MainWindow(object):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)        
+        self.retranslateUi(MainWindow)
+        
         self.leHorario.keyPressEvent = self.keyPressEvent
+
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+        
 
     def keyPressEvent(self, event):
 
         if event.key() == Qt.Key_Return:
-                adicionar(self, True)
+                adicionar(self, 1)
 
         elif event.key() == Qt.Key_Backspace:
                 self.leHorario.setText(self.leHorario.text()[:-1])
                 
         else:
                 self.leHorario.setText(self.leHorario.text() + get_string(event.key()))
-                
+
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -247,3 +251,13 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "Horário"))
         self.label_4.setText(_translate("MainWindow", "Últimas Entradas"))
         self.pbRemover.setText(_translate("MainWindow", "Remover"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

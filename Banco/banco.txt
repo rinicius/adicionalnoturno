@@ -1,0 +1,57 @@
+;
+vinicius1 | 29/04/2020 Qua | Adicional Noturno: 7:00:00
+vinicius12 | 29/04/2020 Qua | Adicional Noturno: 7:00:00
+vinicius123 | 29/04/2020 Qua | Adicional Noturno: 7:00:00
+Carlos | 29/04/2020 Qua | Adicional Noturno: 0:05:00
+Carlos | 29/04/2020 Qua | Adicional Noturno: 35:00:00
+Carlos | 29/04/2020 Qua | Adicional Noturno: 14:33:00
+Carlos | 29/04/2020 Qua | Adicional Noturno: 2:05:00
+Carlos | 29/04/2020 Qua | Adicional Noturno: 2:05:00
+caa | 29/04/2020 Qua | Adicional Noturno: 2:05:00
+Carlos  |  29/04/2020 Qua  |  Adicional Noturno: 2:05:00
+Carlos  |  29/04/2020 Qua  |  Adicional Noturno: 0:00:00
+ca  |  29/04/2020 Qua  |  Adicional Noturno: 2:05:00
+cacsa  |  29/04/2020 Qua  |  Adicional Noturno: 2:05:00
+Carlos  |  29/04/2020 Qua  |  Adicional Noturno: 2:05:00
+Cralos  |  29/04/2020 Qua  |  Adicional Noturno: 2:04:00
+Crolso  |  29/04/2020 Qua  |  Adicional Noturno: 2:05:00
+Crlsad  |  29/04/2020 Qua  |  Adicional Noturno: 2:05:00
+Carlos  |  29/04/2020 Qua  |  Adicional Noturno: 99:46:00
+Carlos  |  29/04/2020 Qua  |  Adicional Noturno: 4:10:00
+tassia  |  29/04/2020 Qua  |  Adicional Noturno: 111:38:00
+Calorssadada  |  30/04/2020 Qui  |  Adicional Noturno: 0:05:00
+
+
+  |  30/04/2020 Qui  |  Adicional Noturno: None
+  |  30/04/2020 Qui  |  Adicional Noturno: None
+
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:00:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:00:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:05:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:05:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:05:00
+12123123  |  02/05/2020 Sab  |  Adicional Noturno: 0:05:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:05:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:05:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:05:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:04:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:05:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:05:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:05:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:06:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:07:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:06:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:07:00
+213123  |  02/05/2020 Sab  |  Adicional Noturno: 0:09:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:08:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:07:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:07:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:07:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:07:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:06:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:08:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:02:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:07:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:08:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:07:00
+  |  02/05/2020 Sab  |  Adicional Noturno: 0:08:00
